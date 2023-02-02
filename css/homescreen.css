@@ -1,0 +1,98 @@
+html{
+
+    font-family: "Lucida Sans", sans-serif;
+
+}
+
+.header {
+
+    background-color: #3B413C;
+    color: #ffffff;
+    padding: 4px;
+    display:flex;
+   
+}
+
+/* styling search bar */
+.search input[type=text]{
+    width:800px;
+    height:25px;
+    border-radius:25px;
+    border: none;
+
+}
+
+.search button{
+
+    background-color: #0074D9;
+    color: #f2f2f2;
+    float: right;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.search {
+    
+    align-self: center;
+    padding: 15px;
+
+}
+
+.profileimage{
+
+    border: 1px solid black;
+        
+    
+   
+
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
