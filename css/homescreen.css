@@ -1,4 +1,4 @@
-html{
+html {
 
     font-family: "Lucida Sans", sans-serif;
 
@@ -9,15 +9,15 @@ html{
     background-color: #3B413C;
     color: #ffffff;
     padding: 4px;
-    display:flex;
+    display: flex;
    
 }
 
 /* styling search bar */
 .search input[type=text]{
-    width:800px;
-    height:25px;
-    border-radius:25px;
+    width: 800px;
+    height: 25px;
+    border-radius: 25px;
     border: none;
     position: relative;
 
@@ -46,9 +46,6 @@ html{
 .profileimage{
 
     border: 1px solid black;
-        
-    
-   
 
 }
 
