@@ -56,10 +56,11 @@ html{
     float: left;
     overflow: hidden;
   }
-  
+  /* Size of dropdown button */
   .dropdown .dropbtn {
     font-size: 16px;  
     border: none;
+   
     outline: none;
     color: white;
     padding: 14px 16px;
@@ -67,33 +68,37 @@ html{
     font-family: inherit;
     margin: 0;
   }
-  
+  /* Color on hover of dropdown */
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: red;
   }
-  
+  /* Boxs in dropdown */
   .dropdown-content {
     display: none;
-    position: absolute;
+    
+    position: fixed;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
+
+  /* Text in the dropdown */
   .dropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
-    display: block;
-    text-align: left;
+    display:grid;
+    text-align: right;
   }
-  
+  /* Color of hover in dropdown */
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #ddf;
   }
-  
+  /* Location of dropdown on-click*/
   .dropdown:hover .dropdown-content {
-    display: block;
+    display:block;
+    
+    left: 907px;
   }
