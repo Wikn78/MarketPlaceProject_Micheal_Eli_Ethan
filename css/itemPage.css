@@ -1,6 +1,5 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-grid;
     background-color: blue;
     margin-top:5pt;
     margin-bottom: 5pt;
@@ -8,8 +7,12 @@
     height: 60vh;
 }
 
+.container:nth-child(1) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
 .item {
-    grid-column-start: 1;
     background-color: yellow;
     margin:1em;
     width:45%;
