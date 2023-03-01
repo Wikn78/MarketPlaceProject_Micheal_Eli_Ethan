@@ -16,12 +16,16 @@ html {
 /* styling search bar */
 .search input[type=text]{
 
-    width: 75vw;
+    width: 70vw;
     height: 25px;
     border-radius: 25px;
     border: none;
-    padding: 5px;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 900px;
     position:relative;
+    float: none;
+    margin: auto;
 
 }
 
