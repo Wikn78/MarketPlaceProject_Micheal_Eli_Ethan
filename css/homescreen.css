@@ -16,13 +16,13 @@ html {
 /* styling search bar */
 .search input[type=text]{
 
-    width: 70vw;
+    width: 90vw;
     height: 25px;
     border-radius: 25px;
     border: none;
     padding-left: 16px;
     padding-right: 16px;
-    max-width: 900px;
+    max-width: 75vw;
     position:relative;
     float: none;
     margin: auto;
@@ -116,28 +116,29 @@ html {
       'menu main main main main main'
       'menu main main main main main'
       'footer footer footer footer footer footer';
-    gap: 10px;
-    background-color: #2196F3;
-    padding: 10px;
+    
+    background-color: #3B413C;
+    padding: 5px;
   }
 
   .header-item {
     grid-area: header;
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 3vw;
+    /* border: 1px solid rgba(5, 151, 71, 0.8); */
+    
     font-size: 30px;
-    text-align: center;
+   
   }
 
   .search-settings-grid {
     grid-area: menu;
     background-color: rgba(155, 17, 17, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    height: 30vw;
-    padding: 8vw;
-    font-size: 30px;
-    text-align: center; 
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    height: 100vh;
+    padding: 10px;
+    width: 30vw;
+    font-size: 60px;
+    text-align: left; 
 
   }
 
@@ -147,7 +148,8 @@ html {
     grid-area: main;
     background-color: rgba(22, 154, 20, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20vw;
+    padding: 20px;
+    width: 70vw;
     font-size: 30px;
     text-align: center;
 
@@ -157,7 +159,8 @@ html {
     grid-area: footer;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 3vw;
+    padding: 3px;
+    height: 10vh;
     font-size: 30px;
     text-align: center;
 
