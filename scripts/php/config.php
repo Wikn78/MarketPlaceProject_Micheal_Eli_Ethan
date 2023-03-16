@@ -1,7 +1,7 @@
 <?php
     /* Database credentials. Assuming you are running MySQL
     server with default setting (user 'root' with no password) */
-    define('DB_SERVER', '	fdb1029.awardspace.net');
+    define('DB_SERVER', 'fdb1029.awardspace.net');
     define('DB_USERNAME', '4240987_epwilhe');
     define('DB_PASSWORD', 'Kipper9000');
     define('DB_NAME', 'users');
