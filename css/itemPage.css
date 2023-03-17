@@ -7,15 +7,49 @@
       'comments comments comments comments comments comments'
       'footer footer footer footer footer footer';
     gap: 10px;
-    background-color: #2196F3;
     padding: 10px;
 }
 
+.products-grid, .comments-grid {
+  grid-area: main;
+  background-color: rgba(22, 154, 20, 0.8);
+  border: transparent;
+  width: auto;
+  font-size: 30px;
+  text-align: center;
+}
+
 .comments-grid {
-    grid-area: comments;
-    background-color: rgba(22, 154, 20, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20vw;
-    font-size: 30px;
-    text-align: center;
+  grid-area: comments;
+}
+
+.footer-grid {
+  grid-area: footer;
+  background-color: orange;
+  border: transparent;
+  text-align: center;
+  height: auto;
+  font-size: 10px;
+  padding: 3px;
+}
+
+.sub-container {
+  display: grid;
+    grid-template-areas:
+      'item1 item2';
+    gap: 5px;
+}
+
+#item1, #item2 {
+  grid-area: item1;
+  background-color: orange;
+  border: transparent;
+  padding: 10vw;
+  width: auto;
+  font-size: 30px;
+  text-align: center;
+}
+
+#item2 {
+  grid-area: item2;
 }
