@@ -1,16 +1,27 @@
 <?php
-	if(isset($_GET['id'])) {
-		$pid = ($_GET[id]);
-	}
-
-	if(isset($_GET['iname'])) {
-		$pname = ($_GET['iname']);
+	if(isset($_GET['title'])) {
+		$title = ($_GET['title']);
   	}
 
-	if(isset($_GET['price'])) {
-		$uprice = ($_GET[price]);
+    if(isset($_GET['desc'])) {
+		$desc = ($_GET['desc']);
 	}
 
+    if(isset($_GET['uid'])) {
+		$uid = ($_GET[uid]);
+	}
+
+    if(isset($_GET['location'])) {
+		$location = ($_GET['location']);
+	}
+
+    if(isset($_GET['picture'])) {
+		$pic = ($_GET['picture']);
+	}
+
+	if(isset($_GET['price'])) {
+		$price = ($_GET[price]);
+	}
 
 	//Provide your server and database information below
 	$dbhost = 'fdb1029.awardspace.net';
@@ -27,11 +38,11 @@
 
 	// sql to create table
 
-	$sql = "INSERT INTO My_ProductInfo (ProductName, UnitPrice, CurrentAmount, ReorderAmount)
-	VALUES ('$pname', $uprice, $camount, $ramount)";
+	$sql = "INSERT INTO My_ProductInfo (ProductTitle, ProductDescription, UserID, lLcation, ProductPicture, ProductPrice)
+	VALUES ('$title, $desc, $uid, $location, $picture, $price)";
 
 	if (mysqli_query($conn, $sql)) {
-	    echo "New record created successfully";
+	    echo "New listing created successfully";
 	} else {
 	    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
