@@ -1,5 +1,4 @@
 <?php
-
 	$dbhost = 'fdb30.awardspace.net';
 	$dbuser = '4245416_se4050ethanlouis';
 	$dbpass = 'pBMPWAcs0_@Xvfuj';
@@ -9,7 +8,4 @@
 	if(! $conn ) {
 		die('Could not connect: ' . mysqli_error());
 	}
-
-
-
-	?>      
+?>      

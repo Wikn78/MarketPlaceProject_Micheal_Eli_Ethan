@@ -23,11 +23,10 @@
 		$price = ($_GET[price]);
 	}
 
-	//Provide your server and database information below
 	$dbhost = 'fdb1029.awardspace.net';
 	$dbuser = '4240987_epwilhe';
 	$dbpass = 'Kipper9000';
-	$dbname = 'Inventory';
+	$dbname = 'fdb1029.awardspace.net';
 	$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
 	if(! $conn ) {
@@ -35,8 +34,6 @@
 	}
 
 	echo 'Connected successfully';
-
-	// sql to create table
 
 	$sql = "INSERT INTO My_ProductInfo (ProductTitle, ProductDescription, UserID, lLcation, ProductPicture, ProductPrice)
 	VALUES ('$title, $desc, $uid, $location, $picture, $price)";
