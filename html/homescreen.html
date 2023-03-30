@@ -93,7 +93,7 @@
                 <br><br>
 
                 <label for="price_range">Price Range: </label>
-                <input type="text" id="low_price" value=""> - <input type="text" id="high_price" value="">
+                <input type="text" id="low_price" value="" placeholder="00000"> - <input type="text" id="high_price" value="" placeholder="00000">
 
                 <br><br>
 
@@ -136,6 +136,25 @@
        
         
     </div>
+
+
+    <script>
+
+        function loadDoc(){
+
+          const xhttp = new XMLHttpRequest();
+          xhttp.onload = function(){
+
+              document.getElementById("demo").innerHTML = this.responseText;
+
+          }
+          xhttp.open("GET", "ajax_info.txt");
+          xhttp.send();
+
+        }
+
+
+    </script>
 
 
 
