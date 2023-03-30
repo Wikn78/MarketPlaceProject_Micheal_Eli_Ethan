@@ -23,7 +23,7 @@
 		$price = ($_GET[price]);
 	}
 
-	include 'DBconnect.php';
+	@require_once './scripts/php/DBconnect.php';
 
 	if(! $conn ) {
 		die('Could not connect: ' . mysqli_error());
