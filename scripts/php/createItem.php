@@ -7,23 +7,26 @@
 		$desc = ($_GET['desc']);
 	}
 
-    if(isset($_GET['uid'])) {
-		$uid = ($_GET[uid]);
-	}
+    //if(isset($_GET['uid'])) {
+	//	$uid = ($_GET[uid]);
+	//}
 
     if(isset($_GET['location'])) {
 		$location = ($_GET['location']);
 	}
 
-    if(isset($_GET['picture'])) {
-		$pic = ($_GET['picture']);
-	}
+    //if(isset($_GET['picture'])) {
+	//	$pic = ($_GET['picture']);
+	//}
 
 	if(isset($_GET['price'])) {
 		$price = ($_GET[price]);
 	}
 
-	@require_once './scripts/php/DBconnect.php';
+	$uid = 00000000001;
+	$pic = "testing";
+
+	@require_once 'DBconnect.php';
 
 	if(! $conn ) {
 		die('Could not connect: ' . mysqli_error());

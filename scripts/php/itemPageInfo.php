@@ -8,6 +8,7 @@ if(! $conn ) {
 echo 'Connected successfully';
 // Need the other pieces of data
 $sql = "SELECT ProductTitle, ProductDescription, UserID, lLcation, ProductPicture, ProductPrice
+
 FROM My_ProductInfo";
 
 if (mysqli_query($conn, $sql)) {
