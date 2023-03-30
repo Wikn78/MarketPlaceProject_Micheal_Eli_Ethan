@@ -4,6 +4,10 @@ html {
 
 }
 
+body {
+  margin: 0px;
+}
+
 .header {
 
     background-color: #3B413C;
@@ -142,7 +146,6 @@ html {
 
   }
 
-
   .products-grid{
 
     grid-area: main;
@@ -152,9 +155,8 @@ html {
     width: 70vw;
     font-size: 30px;
     text-align: center;
-
-
   }
+
   .footer-grid {
     grid-area: footer;
     background-color: rgba(255, 255, 255, 0.8);
@@ -163,5 +165,4 @@ html {
     height: 10vh;
     font-size: 30px;
     text-align: center;
-
   }
