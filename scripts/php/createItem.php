@@ -7,27 +7,26 @@
 		$desc = ($_GET['desc']);
 	}
 
-    if(isset($_GET['uid'])) {
-		$uid = ($_GET[uid]);
-	}
+    //if(isset($_GET['uid'])) {
+	//	$uid = ($_GET[uid]);
+	//}
 
     if(isset($_GET['location'])) {
 		$location = ($_GET['location']);
 	}
 
-    if(isset($_GET['picture'])) {
-		$pic = ($_GET['picture']);
-	}
+    //if(isset($_GET['picture'])) {
+	//	$pic = ($_GET['picture']);
+	//}
 
 	if(isset($_GET['price'])) {
 		$price = ($_GET[price]);
 	}
 
-	$dbhost = 'fdb1029.awardspace.net';
-	$dbuser = '4240987_epwilhe';
-	$dbpass = 'Kipper9000';
-	$dbname = 'fdb1029.awardspace.net';
-	$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+	$uid = 00000000001;
+	$pic = "testing";
+
+	@require_once 'DBconnect.php';
 
 	if(! $conn ) {
 		die('Could not connect: ' . mysqli_error());
