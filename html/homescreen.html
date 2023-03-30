@@ -9,33 +9,138 @@
 </head>
 
 <body>
-    <div class="header">
-        <h1>Halleium</h1>
-        
-        <div class="search">
-                
-            <form action="#">
-                <input type="text" placeholder=" Search Items " name="itemSearch">
-            </form>
-        </div>
-
-        <div class="dropdown">
-            <button class="dropbtn"><div class="profileimage"> <img src="../images/hamburgermenu_512.png" alt="menuIcon" style="width:50px"></div>
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Edit Profile</a>
-                <a href="#">Inbox</a>
-                <a href="#">Your Listings</a>
-                <a href="#">Shipping Address</a>
-                <a href="#">Settings</a>
-                <a href="#">Other</a>
-            </div>
-            
-        </div> 
-    </div>
+    
     
     <!--The rest of it-->
+
+    <div class="grid-container">
+        <div class="header-item">
+            <div class="header">
+                <h1>Halleium</h1>
+                <div class="search">
+                            
+                        <form action="#">
+                            <input type="text" placeholder=" Search Items " name="itemSearch">
+                        </form>
+                    
+                </div>
+        
+                <div class="dropdown">
+                    <button class="dropbtn"><div class="profileimage"> <img src="../images/hamburgermenu_512.png" alt="menuIcon" style="width:50px"></div>
+                        
+                    </button>
+                    
+                    <div class="dropdown-content">
+                        <a href="#">Edit Profile</a>
+                        <a href="#">Inbox</a>
+                        <a href="#">Your Listings</a>
+                        <a href="#">Shipping Address</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Other</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="search-settings-grid"><!--  ADD Search options to the page. 
+        
+        
+            Catogoires: 
+            Price Range: 
+            Location:
+            Condition: new, used, used-like-new, good condtion, broken
+            Rating:
+            --> <form action="">
+
+                <label for="catogoires">Catogoires: </label>
+                <select name="catogoires" id="catogoires">
+
+                  <optgroup label="Brakes">
+                    <option value="roters">Roters</option>
+                    <option value="caliper">Caliper</option>
+                    <option value="drum_brakes">Drum Brakes</option>
+                    <option value="brake_pads">Brake Pads</option>
+                    <option value="other_brakes">Other Parts</option>
+                  </optgroup>
+
+                  <optgroup label="Engine">
+                    <option value="belts">Belts</option>
+                    <option value="other_engine">Other Parts</option>
+                  </optgroup>
+
+                  <optgroup label="Tires/Rims">
+                    <option value="tires">Tires</option>
+                    <option value="rims">Rims</option>
+                    <option value="other_tire_rims">Other Tire/Rims</option>
+                  </optgroup>
+
+                  <optgroup label="Fluids">
+                    <option value="oil">Oil</option>
+                    <option value="brake_fluid">Brake Fluid</option>
+                    <option value="windsheld_fluid">Windsheld Fluid</option>
+                    <option value="other_fluids">Other Fluids</option>
+                  </optgroup>
+
+                  <optgroup label="Other Parts">
+                    <option value="batterys">Batterys</option>
+                    <option value="lights">Lights</option>
+                    <option value="cosmetic_parts">Cosmetic Parts</option>
+                    <option value="other_parts">Other Parts</option>
+                  </optgroup>
+
+                </select>
+                <br><br>
+
+                <label for="price_range">Price Range: </label>
+                <input type="text" id="low_price" value=""> - <input type="text" id="high_price" value="">
+
+                <br><br>
+
+                <label for="location">Location: </label>
+                <input type="text" id="location" value=""> <!-- Figure out how to get like google maps funcationaliy for like locations? -->
+
+                <br><br>
+
+                <label for="condition">Condition: </label>
+                <select name="condition" id="condition">
+
+                    <option value="new">New</option>
+                    <option value="used_like_new">Used Like-New</option>
+                    <option value="good_condition">Good Condition</option>
+                    <option value="used">Used</option>
+                    <option value="damaged">Damaged</option>
+                    <option value="parts">Parts</option>
+                </select>
+
+                <br><br>
+
+                <label for="rating">Rating: </label>
+                <select name="rating" id="rating">
+
+                    <option value="five_star">*****</option>
+                    <option value="four_star">****</option>
+                    <option value="three_star">***</option>
+                    <option value="two_star">**</option>
+                    <option value="one_star">*</option>
+                    
+                </select>
+                </form>
+        
+                
+
+        </div>
+        
+        <div class="products-grid"><!--  Add a scaleable div  --> Products </div>
+        <div class="footer-grid"><!-- Footer inforamtion--> Footer </div>
+       
+        
+    </div>
+
+
+
+
+
 </body>
 
 </html>
