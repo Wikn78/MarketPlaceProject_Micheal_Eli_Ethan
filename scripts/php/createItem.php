@@ -23,11 +23,7 @@
 		$price = ($_GET[price]);
 	}
 
-	$dbhost = 'fdb1029.awardspace.net';
-	$dbuser = '4240987_epwilhe';
-	$dbpass = 'Kipper9000';
-	$dbname = 'fdb1029.awardspace.net';
-	$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+	include 'DBconnect.php';
 
 	if(! $conn ) {
 		die('Could not connect: ' . mysqli_error());
