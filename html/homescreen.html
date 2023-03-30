@@ -13,7 +13,8 @@
     
     <!--The rest of it-->
 
-    <div class="grid-container">
+    <div class="grid-container" id="test">
+      
         <div class="header-item">
             <div class="header">
                 <h1>Halleium</h1>
@@ -43,15 +44,8 @@
             </div>
         </div>
         
-        <div class="search-settings-grid"><!--  ADD Search options to the page. 
-        
-        
-            Catogoires: 
-            Price Range: 
-            Location:
-            Condition: new, used, used-like-new, good condtion, broken
-            Rating:
-            --> <form action="">
+        <div class="search-settings-grid">
+          <form action="">
 
                 <label for="catogoires">Catogoires: </label>
                 <select name="catogoires" id="catogoires">
@@ -131,7 +125,11 @@
 
         </div>
         
-        <div class="products-grid"><!--  Add a scaleable div  --> Products </div>
+        <div class="products-grid" id="products">
+          
+          <button type="button" onclick="loadDoc()">  Products </button>
+
+        </div>
         <div class="footer-grid"><!-- Footer inforamtion--> Footer </div>
        
         
@@ -145,10 +143,10 @@
           const xhttp = new XMLHttpRequest();
           xhttp.onload = function(){
 
-              document.getElementById("demo").innerHTML = this.responseText;
+              document.getElementById("test").innerHTML = this.responseText;
 
           }
-          xhttp.open("GET", "ajax_info.txt");
+          xhttp.open("GET", "test.txt");
           xhttp.send();
 
         }
