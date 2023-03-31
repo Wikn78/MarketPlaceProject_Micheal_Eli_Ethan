@@ -8,12 +8,12 @@
 
 </head>
 
-<body>
-    
+<body onload="loadDoc()">
+
     
     <!--The rest of it-->
 
-    <div class="grid-container" id="test">
+    <div class="grid-container" >
       
         <div class="header-item">
             <div class="header">
@@ -109,7 +109,7 @@
 
                 <br><br>
 
-                <label for="rating">Rating: </label>
+                <label for="rating" id="TEST">Rating: </label>
                 <select name="rating" id="rating">
 
                     <option value="five_star">*****</option>
@@ -125,34 +125,62 @@
 
         </div>
         
-        <div class="products-grid" id="products">
+        <div class="products-grid" id="products" >
+          <div class="grid-container-2">
           
-          <button type="button" onclick="loadDoc()">  Products </button>
+              <header class="item-title">Hello</header>
+              <h2 class="item-price">13.99</h2>
+              <h2 class="item-image">12</h2>
+              <p class="item-desc">Desc</p>
 
+          </div>
         </div>
+
+        <script type="application/javascript">
+          // Fills the area with all the products
+          function loadDoc(){
+  
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+             
+                document.getElementById("products").innerHTML = this.responseText;
+              
+            };
+            
+            xhttp.open("GET", "../scripts/php/test_Items.php", true);
+            xhttp.send();
+  
+          }
+
+          function loadPage(pID){
+              
+            if(pID == ''){
+
+              document.getElementById("TEST").innerHTML = "FUCK";
+              return;
+            }
+            else{
+              
+              window.location.href = "../scripts/php/loadProductPage.php?id=" + pID;
+              
+              
+              
+              
+            }
+
+            
+            
+          }
+  
+      </script>
+      
         <div class="footer-grid"><!-- Footer inforamtion--> Footer </div>
        
         
     </div>
 
 
-    <script>
-
-        function loadDoc(){
-
-          const xhttp = new XMLHttpRequest();
-          xhttp.onload = function(){
-
-              document.getElementById("test").innerHTML = this.responseText;
-
-          }
-          xhttp.open("GET", "test.txt");
-          xhttp.send();
-
-        }
-
-
-    </script>
+   
 
 
 
