@@ -18,7 +18,7 @@
                     
                         <header class=\"item-title\">". $row['ProductTitle']. "</header>
                         <h2 class=\"item-price\">". $row['ProductPrice']. "</h2>
-                        <h2 class=\"item-image\">". $row['ProductPicture']. "</h2>
+                        
                         <p class=\"item-desc\">". $row['ProductDescription']. "</p>
                         <p class=\"item-desc\">". $row['Location']. "</p>
     
