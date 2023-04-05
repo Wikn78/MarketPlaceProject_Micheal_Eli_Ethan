@@ -40,23 +40,22 @@
 
     <div class="container">
         <div class="products-grid">
+            <form action="../scripts/php/createItem.php" method="post" enctype="multipart/form-data">
             <div class="sub-container">
                 <div id="item1">
-                    
+                    Select image to upload:
+                    <input type="file" type="file" name="pic" id="pic" accept="image/gif, image/jpeg, image/png"><br>
+                    <label for="title">Item name</label>
+                    <input type="text" id="title"><br>
+                    <label for="location">Location</label>
+                    <input type="text" id="location"><br>
+                    <label for="price">Price</label>
+                    <input type="text" id="Price"><br>
+                    <label for="desc">Desc</label>
+                    <input type="textbox" id="desc"><br>
+                    <input type="submit" value="Input">
                 </div>
-                <div id="item2">
-                    <form action="../scripts/php/createItem.php">
-                        <label for="title">Item name</label>
-                        <input type="text" id="title"><br>
-                        <label for="location">Location</label>
-                        <input type="text" id="location"><br>
-                        <label for="price">Price</label>
-                        <input type="text" id="Price"><br>
-                        <label for="desc">Desc</label>
-                        <input type="textbox" id="desc"><br>
-                        <input type="submit" value="Input">
-                    </form>
-                </div>
+            </form>
             </div>
         </div>
         <div class="footer-grid"><p>Copyright Halleium</p></div>

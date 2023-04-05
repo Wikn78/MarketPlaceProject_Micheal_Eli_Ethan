@@ -15,18 +15,18 @@
 		$location = ($_GET['location']);
 	}
 
-    //if(isset($_GET['picture'])) {
-	//	$pic = ($_GET['picture']);
-	//}
+    if(isset($_GET['picture'])) {
+		$pic = ($_GET['picture']);
+	}
 
 	if(isset($_GET['price'])) {
 		$price = ($_GET[price]);
 	}
 
-	$uid = 00000000001;
+	$uid = 90000000000;
 	$pic = "testing";
 
-	@require_once 'DBconnect.php';
+	@require_once 'Configure.php';
 
 	if(! $conn ) {
 		die('Could not connect: ' . mysqli_error());

@@ -36,7 +36,7 @@
 .sub-container {
   display: grid;
     grid-template-areas:
-      'item1 item2';
+      'item1';
     gap: 5px;
 }
 

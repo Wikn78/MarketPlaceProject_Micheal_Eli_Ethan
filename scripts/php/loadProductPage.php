@@ -1,5 +1,5 @@
 <?php
-    require('DBConnect.php');
+    require('Configure.php');
 
     $id = $_REQUEST["id"];
 
