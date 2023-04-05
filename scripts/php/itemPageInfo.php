@@ -1,5 +1,5 @@
 <?php
-@require_once './scripts/php/DBconnect.php';
+@require_once 'Configure.php';
 
 if(! $conn ) {
     die('Could not connect: ' . mysqli_error());
@@ -8,7 +8,6 @@ if(! $conn ) {
 echo 'Connected successfully';
 // Need the other pieces of data
 $sql = "SELECT ProductTitle, ProductDescription, UserID, lLcation, ProductPicture, ProductPrice
-
 FROM My_ProductInfo";
 
 if (mysqli_query($conn, $sql)) {

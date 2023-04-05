@@ -26,7 +26,7 @@
 	$uid = 00000000001;
 	$pic = "testing";
 
-	@require_once 'DBconnect.php';
+	@require_once 'Configure.php';
 
 	if(! $conn ) {
 		die('Could not connect: ' . mysqli_error());

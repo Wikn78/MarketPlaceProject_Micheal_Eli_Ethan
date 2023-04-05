@@ -1,6 +1,6 @@
 <?php
 
-    require('DBConnect.php');
+    require('Configure.php');
     
     $sql = "SELECT ProductID, ProductTitle, ProductDescription, ProductPicture, ProductPrice FROM ProductInformation";
 	$result = mysqli_query($conn, $sql);
