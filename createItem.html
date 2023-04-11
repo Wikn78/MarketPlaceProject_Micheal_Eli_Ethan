@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/itemPage.css">
-
 </head>
 
 <body>
@@ -16,11 +15,41 @@
 
     <div class="container">
         <div class="products-grid">
-            <form action="../scripts/php/createItem.php" method="post" enctype="multipart/form-data">
+            <form action="./scripts/php/createItem.php" method="post" enctype="multipart/form-data">
             <div class="sub-container">
                 <div id="item1">
+
+                    <script type="application/javascript">
+                        const input = document.querySelector("input")
+                        const output = document.querySelector("output")
+                        let imagesArray = []
+
+                        input.addEventListener("change", () => {
+                            const file = input.files
+                            imagesArray.push(file[0])
+                            displayImages()
+                        })
+
+                        function displayImages() {
+                            let images = ""
+                            imagesArray.forEach((image, index) => {
+                            images += `<div class="image">
+                                        <img src="${URL.createObjectURL(image)}" alt="image">
+                                        <span onclick="deleteImage(${index})">&times;</span>
+                                        </div>`
+                            })
+                            output.innerHTML = images
+                        }
+
+                        function deleteImage(index) {
+                            imagesArray.splice(index, 1)
+                            displayImages()
+                        }
+                    </script>
+
+                    <output></output>
                     <label>Select image to upload:</label>
-                    <input type="file" type="file" name="pic" id="pic" accept="image/gif, image/jpeg, image/png"><br>
+                    <input type="file" name="pic" id="pic" accept="image/jpeg, image/jpg, image/png"><br>
                     <label for="title">Item name:</label>
                     <input type="text" id="title"><br>
                     <label for="location">Location:</label>
