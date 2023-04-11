@@ -7,6 +7,7 @@
 		$desc = ($_GET['desc']);
 	}
 
+	// get user id from active session
     //if(isset($_GET['uid'])) {
 	//	$uid = ($_GET[uid]);
 	//}
