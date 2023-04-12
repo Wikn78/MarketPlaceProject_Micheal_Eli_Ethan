@@ -12,27 +12,15 @@
 
             while($row = mysqli_fetch_assoc($result)) {
     
-                echo 
-                "
-                    <div class=\"grid-container-2\" onclick=\"loadPage('" . $id . "')\">
+                echo
+                "<div class=\"grid-container-2\" onclick=\"loadPage('" . $id . "')\">
+                    <header class=\"item-title\">". $row['ProductTitle']. "</header>
+                    <h2 class=\"item-price\">". $row['ProductPrice']. "</h2>
                     
-                        <header class=\"item-title\">". $row['ProductTitle']. "</header>
-                        <h2 class=\"item-price\">". $row['ProductPrice']. "</h2>
-                        
-                        <p class=\"item-desc\">". $row['ProductDescription']. "</p>
-                        <p class=\"item-desc\">". $row['Location']. "</p>
-    
-                    </div>
-                
-                
-                
-                ";
-            
+                    <p class=\"item-desc\">". $row['ProductDescription']. "</p>
+                    <p class=\"item-desc\">". $row['Location']. "</p>
+                </div>";
             }
-        
         }
-
     }
-
-
 ?>

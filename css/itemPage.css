@@ -1,3 +1,4 @@
+/*grid sectinon*/
 .container {
     display: grid;
     grid-template-areas:
@@ -7,9 +8,11 @@
       'comments comments comments comments comments comments'
       'footer footer footer footer footer footer';
     gap: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.products-grid, .comments-grid {
+.listing-grid, .comments-grid {
   grid-area: main;
   border: transparent;
   width: auto;
@@ -21,21 +24,24 @@
 
 .comments-grid {
   grid-area: comments;
+  grid-template-areas:
+    'item1';
+  gap: 5px;
 }
 
 .sub-container {
   display: grid;
-    grid-template-areas:
-      'item1';
-    gap: 5px;
+  grid-template-areas:
+    'item1' 'item2';
+  gap: 5px;
 }
 
 #item1, #item2 {
   grid-area: item1;
   border: transparent;
-  padding: 10vw;
+  padding: 5vw;
   width: auto;
-  font-size: 30px;
+  font-size: 14pt;
   text-align: center;
   background-color: #DAF0EE;
 }
@@ -44,6 +50,7 @@
   grid-area: item2;
 }
 
+/*image preview section*/
 output{
   width: 100%;
   min-height: 50px;
