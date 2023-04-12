@@ -17,6 +17,7 @@
   border: transparent;
   width: auto;
   font-size: 30px;
+  align-items: center;
   text-align: center;
   padding: 10px;
   background-color: #9DB5B2;
@@ -52,19 +53,21 @@
 
 /*image preview section*/
 output{
-  width: 100%;
+  width: 30%;
   min-height: 50px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 5px;
   position: relative;
   border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 output .image{
   height: 400px;
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   position: relative;
@@ -73,21 +76,4 @@ output .image{
 output .image img{
   height: 100%;
   width: 100%;
-}
-
-output .image span {
-  position: absolute;
-  top: -4px;
-  right: 4px;
-  cursor: pointer;
-  font-size: 22px;
-  color: white;
-}
-
-output .image span:hover {
-  opacity: 0.8;
-}
-
-output .span--hidden{
-  visibility: hidden;
 }

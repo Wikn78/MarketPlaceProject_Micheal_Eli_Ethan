@@ -1,4 +1,6 @@
 <?php
+	header( "refresh:5; url=../../homescreen.html" ); // set this to go to the new listing eventually
+
 	if(isset($_GET['title'])) {
 		$title = ($_GET['title']);
   	}
@@ -33,13 +35,11 @@
 		die('Could not connect: ' . mysqli_error());
 	}
 
-	echo 'Connected successfully';
-
 	$sql = "INSERT INTO My_ProductInfo (ProductTitle, ProductDescription, UserID, lLcation, ProductPicture, ProductPrice)
 	VALUES ('$title, $desc, $uid, $location, $picture, $price)";
 
 	if (mysqli_query($conn, $sql)) {
-	    echo "New listing created successfully";
+	    echo "New listing created successfully! You will be redirected soon...";
 	} else {
 	    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
