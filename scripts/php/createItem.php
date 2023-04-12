@@ -8,7 +8,7 @@
 	}
 
 	// get user id from active session
-    //if(isset($_GET['uid'])) {
+    // if(isset($_GET['uid'])) {
 	//	$uid = ($_GET[uid]);
 	//}
 
@@ -24,7 +24,7 @@
 		$price = ($_GET[price]);
 	}
 
-	$uid = 90000000000;
+	$uid = 99999999999;
 	$pic = "testing";
 
 	@require_once 'Configure.php';

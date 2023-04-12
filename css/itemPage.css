@@ -7,30 +7,20 @@
       'comments comments comments comments comments comments'
       'footer footer footer footer footer footer';
     gap: 10px;
-    padding: 10px;
 }
 
 .products-grid, .comments-grid {
   grid-area: main;
-  background-color: rgba(22, 154, 20, 0.8);
   border: transparent;
   width: auto;
   font-size: 30px;
   text-align: center;
+  padding: 10px;
+  background-color: #9DB5B2;
 }
 
 .comments-grid {
   grid-area: comments;
-}
-
-.footer-grid {
-  grid-area: footer;
-  background-color: orange;
-  border: transparent;
-  text-align: center;
-  height: auto;
-  font-size: 10px;
-  padding: 3px;
 }
 
 .sub-container {
@@ -42,12 +32,12 @@
 
 #item1, #item2 {
   grid-area: item1;
-  background-color: orange;
   border: transparent;
   padding: 10vw;
   width: auto;
   font-size: 30px;
   text-align: center;
+  background-color: #DAF0EE;
 }
 
 #item2 {
@@ -56,7 +46,7 @@
 
 output{
   width: 100%;
-  min-height: 150px;
+  min-height: 50px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -66,7 +56,7 @@ output{
 }
 
 output .image{
-  height: 150px;
+  height: 400px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   overflow: hidden;

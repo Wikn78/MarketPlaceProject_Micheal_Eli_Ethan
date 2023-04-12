@@ -11,15 +11,9 @@ input.addEventListener("change", () => {
 function displayImages() {
     let images = ""
     imagesArray.forEach((image, index) => {
-      images += `<div class="image">
-                  <img src="${URL.createObjectURL(image)}" alt="image">
-                  <span onclick="deleteImage(${index})">&times;</span>
-                </div>`
+        images += `<div class="image">
+            <img src="${URL.createObjectURL(image)}" alt="image">
+        </div>`
     })
     output.innerHTML = images
-}
-
-function deleteImage(index) {
-    imagesArray.splice(index, 1)
-    displayImages()
 }

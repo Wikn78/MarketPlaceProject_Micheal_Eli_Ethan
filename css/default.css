@@ -168,19 +168,13 @@ body {
 
 .footer-grid {
   grid-area: footer;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 3px;
-  height: 10vh;
-  font-size: 30px;
+  background-color: #DAF0EE;
+  border: transparent;
   text-align: center;
+  height: auto;
+  font-size: 10px;
+  padding: 3px;
 }
-
-
-
-
-
-
 
 .grid-container-2{
   display: grid;
