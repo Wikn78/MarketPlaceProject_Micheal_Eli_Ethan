@@ -1,6 +1,8 @@
 <?php
 	header( "refresh:5; url=../../homescreen.html" ); // set this to go to the new listing eventually
 
+	// pull active session and apply it to a UserID variable
+
 	if(isset($_GET['title'])) {
 		$title = ($_GET['title']);
   	}
