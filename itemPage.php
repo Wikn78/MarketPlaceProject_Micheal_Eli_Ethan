@@ -33,6 +33,7 @@
                     -->
                     <a href="#">Edit Profile</a>
                     <a href="#">Inbox</a>
+                    <a href="./createItem.html">List an Item</a>
                     <a href="#">Your Listings</a>
                     <a href="#">Shipping Address</a>
                     <a href="#">Settings</a>
@@ -62,13 +63,13 @@
                     <h2>" . $row['ProductTitle'] . "</h2>
                         <div class=\"sub-container\">
                             <div id=\"item1\">
-                                <img src=\"./images/imageIcons/image0.png\">
+                                <img src=\"./images/imageIcons/test.jpg\">
                             </div>
                             <div id=\"item2\">
-                                <img class=\"user-img\" src=\"./images/imageIcons/image0.png\">
+                                <img class=\"user-img\" src=\"./images/imageIcons/test.jpg\">
                                 <h3 class=\"user-name\">Test</h3><br>
-                                <h2 class=\"item-price\">Price: ". $row['ProductPrice']. "</h2><br>
-                                <p class=\"item-locale\">Location: ". $row['Location']. "</p><br>
+                                <h2 class=\"item-price\">Price: ". $row['ProductPrice'] ."</h2><br>
+                                <p class=\"item-locale\">Location: ". $row['Location'] ."</p><br>
                                 <p class=\"item-desc\">Description: ". $row['ProductDescription'] ."</p><br>
                             </div>
                         </div>

@@ -3,33 +3,34 @@
 
 	// pull active session and apply it to a UserID variable
 
-	if(isset($_GET['title'])) {
-		$title = ($_GET['title']);
+	if(isset($_POST['title'])) {
+		$title = (string)($_POST['title']);
   	}
 
-    if(isset($_GET['desc'])) {
-		$desc = ($_GET['desc']);
+    if(isset($_POST['desc'])) {
+		$desc = (string)($_POST['desc']);
 	}
 
 	// get user id from active session
-    // if(isset($_GET['uid'])) {
-	//	$uid = ($_GET[uid]);
+    // if(isset($_POST['uid'])) {
+	//	$uid = ($_POST[uid]);
 	//}
 
-    if(isset($_GET['location'])) {
-		$location = ($_GET['location']);
+    if(isset($_POST['location'])) {
+		$location = (string)($_POST['location']);
 	}
 
-    if(isset($_GET['picture'])) {
-		$pic = ($_GET['picture']);
+    if(isset($_POST['pic'])) {
+	 	$pic = ($_POST['pic']);
 	}
 
-	if(isset($_GET['price'])) {
-		$price = ($_GET[price]);
+	if(isset($_POST['price'])) {
+		$pStr = ($_POST['price']);
+		$price = (float)$pStr;
 	}
 
-	$uid = 99999999999;
-	$pic = "testing";
+	$uid = 9999;
+	$pic = "../../images/imageIcons/test.jpg"; // this will eventually save the location properly.
 
 	@require_once 'Configure.php';
 
@@ -37,8 +38,8 @@
 		die('Could not connect: ' . mysqli_error());
 	}
 
-	$sql = "INSERT INTO My_ProductInfo (ProductTitle, ProductDescription, UserID, lLcation, ProductPicture, ProductPrice)
-	VALUES ('$title, $desc, $uid, $location, $picture, $price)";
+	$sql = "INSERT INTO ProductInformation (ProductTitle, ProductDescription, UserID, Location, ProductPicture, ProductPrice)
+	VALUES ('$title', '$desc', '$uid', '$location', '$pic', '$price');";
 
 	if (mysqli_query($conn, $sql)) {
 	    echo "New listing created successfully! You will be redirected soon...";

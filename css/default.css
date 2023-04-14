@@ -214,7 +214,10 @@ body {
   grid-area: picture;
   background-color: rgba(22, 154, 20, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-
+  min-height: 100px;
+  max-height: 300px;
+  min-width: 100px;
+  max-width: 600px;
   z-index: 2;
 
 }
