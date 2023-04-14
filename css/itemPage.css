@@ -2,11 +2,9 @@
 .container {
     display: grid;
     grid-template-areas:
-      'header header header header header header'
-      'main main main main main main'
-      'main main main main main main'
-      'comments comments comments comments comments comments'
-      'footer footer footer footer footer footer';
+      'main'
+      'comments'
+      'footer';
     gap: 10px;
     margin-left: 20px;
     margin-right: 20px;
@@ -31,24 +29,57 @@
 }
 
 .sub-container {
-  display: grid;
-  grid-template-areas:
-    'item1' 'item2';
+  display: flex;
   gap: 5px;
+  z-index: 1;
 }
 
 #item1, #item2 {
   grid-area: item1;
-  border: transparent;
+  border: solid black;
   padding: 5vw;
   width: auto;
   font-size: 14pt;
   text-align: center;
   background-color: #DAF0EE;
+  flex: 1;
+}
+
+.sub-container #item2 {
+  display: grid;
+  grid-template-areas: 
+    'avatar' 'name'
+    'locale' 'none'
+    'price' 'none'
+    'desc' 'desc';
 }
 
 #item2 {
   grid-area: item2;
+  align-items: left;
+  text-align: left;
+}
+
+#item2 .item-locale{
+  grid-area: locale;
+  z-index: 2;
+}
+
+#item2 .item-price{
+  grid-area: price;
+  z-index: 2;
+}
+
+.user-img {
+  grid-area: avatar;
+}
+
+.user-name {
+  grid-area: name;
+}
+
+#item2 .item-desc {
+  grid-area: desc;
 }
 
 /*image preview section*/
@@ -76,4 +107,17 @@ output .image{
 output .image img{
   height: 100%;
   width: 100%;
+}
+
+/*General stuff*/
+#item1 img {
+  min-height: 512px;
+  max-height: 900px;
+  width: auto;
+}
+
+#item2 img {
+  min-height: 100px;
+  max-height: 100px;
+  width: auto;
 }
