@@ -14,7 +14,6 @@
   grid-area: main;
   border: transparent;
   width: auto;
-  font-size: 30px;
   align-items: center;
   text-align: center;
   padding: 10px;
@@ -45,16 +44,8 @@
   flex: 1;
 }
 
-.sub-container #item2 {
-  display: grid;
-  grid-template-areas: 
-    'avatar' 'name'
-    'locale' 'none'
-    'price' 'none'
-    'desc' 'desc';
-}
-
 #item2 {
+  display: flex;
   grid-area: item2;
   align-items: left;
   text-align: left;
@@ -62,12 +53,10 @@
 
 #item2 .item-locale{
   grid-area: locale;
-  z-index: 2;
 }
 
 #item2 .item-price{
   grid-area: price;
-  z-index: 2;
 }
 
 .user-img {
@@ -80,6 +69,20 @@
 
 #item2 .item-desc {
   grid-area: desc;
+}
+
+/*General stuff*/
+#item1 img {
+  min-height: 512px;
+  max-height: 900px;
+  width: auto;
+}
+
+#item2 img {
+  min-height: 100px;
+  max-height: 100px;
+  width: auto;
+  flex: 1;
 }
 
 /*image preview section*/
@@ -107,17 +110,4 @@ output .image{
 output .image img{
   height: 100%;
   width: 100%;
-}
-
-/*General stuff*/
-#item1 img {
-  min-height: 512px;
-  max-height: 900px;
-  width: auto;
-}
-
-#item2 img {
-  min-height: 100px;
-  max-height: 100px;
-  width: auto;
 }

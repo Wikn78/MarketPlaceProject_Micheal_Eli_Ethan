@@ -41,6 +41,7 @@
             </div>
         </div>
     </div>
+    
     <!--body-->
     <?php
     require('./scripts/php/Configure.php');
@@ -68,7 +69,7 @@
                                 <h3 class=\"user-name\"></h3>
                                 <p class=\"item-locale\">". $row['Location']. "</p>
                                 <h2 class=\"item-price\">". $row['ProductPrice']. "</h2>
-                                <p class=\"item-desc\"></p>
+                                <p class=\"item-desc\">". $row['ProductDescription'] ."</p>
                             </div>
                         </div>
                     </div>
