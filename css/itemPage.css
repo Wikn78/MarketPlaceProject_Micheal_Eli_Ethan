@@ -45,7 +45,6 @@
 }
 
 #item2 {
-  display: flex;
   grid-area: item2;
   align-items: left;
   text-align: left;
