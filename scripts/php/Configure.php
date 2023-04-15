@@ -2,14 +2,14 @@
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 
-/*
+
 define('DB_SERVER', '127.0.0.1');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'classproject');
-*/
 
 
+/*
 define('DB_SERVER', 'fdb29.awardspace.net');
 define('DB_USERNAME', '4240997_michaelh');
 define('DB_PASSWORD', 'CodingRocks88');
