@@ -50,12 +50,11 @@
             <div class="sub-container">
                 <div id="item1">
 
-                    <script src="./scripts/uploadPreview.js" async> // async is needed to load image without page reload
-                    </script>
+                    <script src="./scripts/uploadPreview.js"></script>
+                    <img src="./images/imageIcons/test.jpg" id="output"/><br>
 
-                    <output></output>
                     <label>Select image to upload:</label>
-                    <input type="file" name="pic" accept="image/jpeg, image/jpg, image/png"><br>
+                    <input type="file" accept="image/jpeg, image/jpg, image/png" onchange="loadFile(event)"><br>
 
                     <label for="title">Item name:</label>
                     <input type="text" name="title"><br>
@@ -74,9 +73,8 @@
             </form>
             </div>
         </div>
-        <div class="footer-grid"><p>Copyright Halleium</p></div>
     </div>
 
+    <footer><p>Copyright Halleium<p></footer>
 </body>
-
 </html>

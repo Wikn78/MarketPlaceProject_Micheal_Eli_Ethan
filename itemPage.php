@@ -66,7 +66,7 @@
                                 <img src=\"". $row['PicturePath'] ."\">
                             </div>
                             <div id=\"item2\">
-                                <img class=\"user-img\" src=\"". $row['PicturePath'] ."\">
+                                <img class=\"user-img\" src=\"./images/Avatars/Default.png\">
                                 <h3 class=\"user-name\">Test</h3><br>
                                 <h2 class=\"item-price\">Price: ". $row['Price'] ."</h2><br>
                                 <p class=\"item-locale\">Location: ". $row['PLocation'] ."</p><br>

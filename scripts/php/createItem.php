@@ -27,7 +27,7 @@
 	}
 
 	$uid = 9999;
-	$pic = ("./images/imageIcons/"+"image.jpg");
+	$pic = ("./images/Products/"+"Default.jpg");
 
 	@require_once 'Configure.php';
 
