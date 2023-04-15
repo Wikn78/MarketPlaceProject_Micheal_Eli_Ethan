@@ -62,7 +62,7 @@ body {
 }
 
 .dropdown {
-  float: left;
+  float: right;
   overflow: hidden;
 }
 /* Size of dropdown button */
@@ -72,6 +72,7 @@ body {
   display: inline-block; 
   position: relative;
   outline: none;
+  
   color: white;
   padding: 14px 16px;
   background-color: inherit;
@@ -82,9 +83,11 @@ body {
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
-/* Boxs in dropdown */
+/* Boxs in dropdown  and location*/
 .dropdown-content {
   display: none;
+  
+  left: 83%; /* align to the right edge of the parent div */
   
   position: fixed;
   background-color: #f9f9f9;
@@ -109,7 +112,7 @@ body {
 /* Location of dropdown on-click*/
 .dropdown:hover .dropdown-content {
   display:block;
-  
+  float:right;
   
 }
 
@@ -166,7 +169,7 @@ body {
   overflow-y: scroll;
   gap: 20px;
   position:relative;
-  z-index: 1;
+ 
 }
 
 .footer-grid {
