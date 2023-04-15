@@ -70,7 +70,7 @@
                 echo
                 "<div class=\"container\" onclick=\"loadPage('" . $id . "')\">
                     <div class=\"listing-grid\"> 
-                    <h2>" . $row['Title'] . "</h2>
+                    <h2>".$row['Title']."</h2>
                         <div class=\"sub-container\">
                             <div id=\"item1\">
                                 <img src=\"".$row['PicturePath']."\">
@@ -78,9 +78,9 @@
                             <div id=\"item2\">
                                 <img class=\"user-img\" src=\"./images/Avatars/Default.png\">
                                 <h3 class=\"user-name\">Test</h3><br>
-                                <h2 class=\"item-price\">Price: ". $row['Price'] ."</h2><br>
-                                <p class=\"item-locale\">Location: ". $row['PLocation'] ."</p><br>
-                                <p class=\"item-desc\">Description: ". $row['PDescription'] ."</p><br>
+                                <h2 class=\"item-price\">Price: ".$row['Price']."</h2><br>
+                                <p class=\"item-locale\">Location: ".$row['PLocation']."</p><br>
+                                <p class=\"item-desc\">Description: ".$row['PDescription']."</p><br>
                             </div>
                         </div>
                     </div>
