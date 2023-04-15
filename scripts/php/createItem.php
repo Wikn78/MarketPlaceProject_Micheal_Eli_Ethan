@@ -1,33 +1,33 @@
 <?php
 	header( "refresh:5; url=../../homescreen.html" ); // set this to go to the new listing eventually
 
-	if(isset($_POST['title'])) {
-		$title = (string)($_POST['title']);
+	if(isset($_GET['title'])) {
+		$title = ($_GET['title']);
   	}
 
-    if(isset($_POST['desc'])) {
-		$desc = (string)($_POST['desc']);
+    if(isset($_GET['desc'])) {
+		$desc = ($_GET['desc']);
 	}
 
 	// get user id from active session
-    // if(isset($_POST['uid'])) {
-	//	$uid = ($_POST[uid]);
+    // if(isset($_GET['uid'])) {
+	//	$uid = ($_GET[uid]);
 	// }
 
-    if(isset($_POST['location'])) {
-		$location = (string)($_POST['location']);
+    if(isset($_GET['location'])) {
+		$location = ($_GET['location']);
 	}
 
-    if(isset($_POST['pic'])) {
-	 	$pic = ($_POST['pic']);
+    if(isset($_GET['pic'])) {
+	 	$pic = ($_GET['pic']);
 	}
 
-	if(isset($_POST['price'])) {
-		$price = floatval($_POST[price]);
+	if(isset($_GET['price'])) {
+		$price = ($_GET['price']);
 	}
 
 	$uid = 9999;
-	$pic = "./images/imageIcons/test.jpg"; // this will eventually save the location properly
+	$pic = ("./images/imageIcons/"+"image.jpg");
 
 	@require_once 'Configure.php';
 
