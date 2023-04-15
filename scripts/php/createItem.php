@@ -1,23 +1,24 @@
 <?php
 	header( "refresh:5; url=../../homescreen.html" ); // set this to go to the new listing eventually
 	@require_once 'Configure.php';
+	$pic = "";
 
-	if(isset($_GET['title'])) {
-		$title = ($_GET['title']);
+	if(isset($_REQUEST['title'])) {
+		$title = ($_REQUEST['title']);
   	}
 
-    if(isset($_GET['desc'])) {
-		$desc = ($_GET['desc']);
+    if(isset($_REQUEST['desc'])) {
+		$desc = ($_REQUEST['desc']);
 	}
 
 	// get user id from active session
-    // if(isset($_GET['uid'])) {
+    // if(isset($_REQUEST['uid'])) {
 
 	// }
 	$uid = 9999;
 
-    if(isset($_GET['location'])) {
-		$location = ($_GET['location']);
+    if(isset($_REQUEST['location'])) {
+		$location = ($_REQUEST['location']);
 	}
 
 	// this doesn't work
@@ -28,7 +29,7 @@
 
 		$file_extension = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
 		$randomish = time() * 24 * 60;
-		$new_Name = $randomish . $file_extension;
+		$new_Name = $randomish . "." . $file_extension;
 		$target_file = $target_dir . $new_Name;
 		$uploadOk = 1;
 		$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -47,14 +48,15 @@
 			if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
 				echo "The file ". htmlspecialchars(basename( $_FILES["image"]["name"])). " has been uploaded.";
 				$pic = ("./images/Products/".htmlspecialchars(basename( $_FILES["image"]["name"]))); // SAVE AS A STRING GOD DAMN
+				echo $target_file;
 			} else {
 				echo "Sorry, there was an error uploading your file.";
 			}
 		}
 	}
 
-	if(isset($_GET['price'])) {
-		$price = ($_GET['price']);
+	if(isset($_REQUEST['price'])) {
+		$price = ($_REQUEST['price']);
 	}
 
 	if(! $conn ) {
@@ -62,7 +64,7 @@
 	}
 
 	$sql = "INSERT INTO ProductInformation (UserID, Title, PDescription, PLocation, PicturePath, Price)
-	VALUES ($uid, '$title', '$desc', '$location', '$pic', $price);";
+	VALUES ($uid, '$title', '$desc', '$location', '$target_file', $price);";
 
 	if (mysqli_query($conn, $sql)) {
 	    echo "New listing created successfully! You will be redirected soon...";
