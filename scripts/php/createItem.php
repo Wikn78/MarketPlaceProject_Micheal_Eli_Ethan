@@ -14,7 +14,8 @@
     // if(isset($_GET['uid'])) {
 	//	$uid = ($_GET[uid]);
 	// }
-
+	$uid = 9999;
+	
     if(isset($_GET['location'])) {
 		$location = ($_GET['location']);
 	}
@@ -26,8 +27,6 @@
 	if(isset($_GET['price'])) {
 		$price = ($_GET['price']);
 	}
-
-	$uid = 9999;
 
 	@require_once 'Configure.php';
 
