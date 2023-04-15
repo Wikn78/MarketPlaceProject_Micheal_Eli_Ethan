@@ -8,16 +8,6 @@
         $connRowCount = 0;
         while($row = mysqli_fetch_assoc($result)) {
 
-            
-            $image = imagecreatefromstring($row['PicturePath']);
-            if ($image !== false) {
-                // Save the image to file
-                imagepng($image, '../../images/imageIcons/image' . $connRowCount . '.png');
-                imagedestroy($image);
-            } else {
-                echo "Error: Could not create image from blob.";
-            }
-
             echo 
             "
                 <div class=\"grid-container-2\" onclick=\"loadPage('" . $row['ProductID'] . "')\">
