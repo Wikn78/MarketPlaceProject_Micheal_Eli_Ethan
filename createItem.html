@@ -54,7 +54,7 @@
                     <img src="./images/Products/Default.jpeg" id="output"/><br>
 
                     <label>Select image to upload:</label>
-                    <input type="file" accept="image/jpeg, image/jpg, image/png" onchange="loadFile(event)"><br>
+                    <input type="file" accept="image/jpeg, image/jpg, image/png" name="image" onchange="loadFile(event)"><br>
 
                     <label for="title">Item name:</label>
                     <input type="text" name="title"><br>
@@ -68,7 +68,7 @@
                     <label for="desc">Desc:</label>
                     <input type="textbox" name="desc"><br>
 
-                    <input type="submit" value="Submit">
+                    <input type="submit" name="submit" value="Submit">
                 </div>
             </form>
             </div>

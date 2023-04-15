@@ -1,5 +1,6 @@
 <?php
 	header( "refresh:5; url=../../homescreen.html" ); // set this to go to the new listing eventually
+	$pic = "";
 
 	if(isset($_GET['title'])) {
 		$title = ($_GET['title']);
@@ -18,8 +19,8 @@
 		$location = ($_GET['location']);
 	}
 
-    if(isset($_GET['pic'])) {
-	 	$pic = ($_GET['pic']);
+    if(isset($_GET['image'])) {
+		
 	}
 
 	if(isset($_GET['price'])) {
@@ -27,7 +28,6 @@
 	}
 
 	$uid = 9999;
-	$pic = ("./images/Products/"+"Default.jpg");
 
 	@require_once 'Configure.php';
 
