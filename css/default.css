@@ -167,7 +167,7 @@ body {
   text-align: center;
   grid: 10px;
   overflow-y: scroll;
-  
+  gap: 20px;
   position:relative;
  
 }

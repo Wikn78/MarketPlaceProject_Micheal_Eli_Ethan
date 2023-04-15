@@ -36,40 +36,39 @@
 
 		// Check if file already exists
 		if (file_exists($target_file)) {
-			echo "Sorry, file already exists.";
+			echo "Sorry, file already exists. ";
 			$uploadOk = 0;
 		}
 
 		// Check if $uploadOk is set to 0 by an error
 		if ($uploadOk == 0) {
-			echo "Sorry, your file was not uploaded.";
+			echo "Sorry, your file was not uploaded. ";
 		// if everything is ok, try to upload file
 		} else {
 			if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-				echo "The file ". htmlspecialchars(basename( $_FILES["image"]["name"])). " has been uploaded.";
-				$pic = ("./images/Products/".htmlspecialchars(basename( $_FILES["image"]["name"]))); // SAVE AS A STRING GOD DAMN
-				echo $target_file;
+				echo "The file ". htmlspecialchars(basename( $_FILES["image"]["name"])). " has been uploaded. ";
+				$pic = ("./images/Products/".htmlspecialchars(basename( $_FILES["image"]["name"])));
+
+				if(isset($_REQUEST['price'])) {
+					$price = ($_REQUEST['price']);
+				}
+			
+				if(! $conn ) {
+					die('Could not connect: ' . mysqli_error());
+				}
+			
+				$sql = "INSERT INTO ProductInformation (UserID, Title, PDescription, PLocation, PicturePath, Price)
+				VALUES ($uid, '$title', '$desc', '$location', '$target_file', $price);";
+			
+				if (mysqli_query($conn, $sql)) {
+					echo "New listing created successfully! You will be redirected soon...";
+				} else {
+					echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+				}
 			} else {
-				echo "Sorry, there was an error uploading your file.";
+				echo "Sorry, there was an error uploading your file. ";
 			}
 		}
-	}
-
-	if(isset($_REQUEST['price'])) {
-		$price = ($_REQUEST['price']);
-	}
-
-	if(! $conn ) {
-		die('Could not connect: ' . mysqli_error());
-	}
-
-	$sql = "INSERT INTO ProductInformation (UserID, Title, PDescription, PLocation, PicturePath, Price)
-	VALUES ($uid, '$title', '$desc', '$location', '$target_file', $price);";
-
-	if (mysqli_query($conn, $sql)) {
-	    echo "New listing created successfully! You will be redirected soon...";
-	} else {
-	    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
 
 	mysqli_close($conn);
