@@ -1,4 +1,4 @@
-.container {
+.grid-container-1 {
     display: grid;
     grid-template-areas:
       'header header header header header header'
@@ -10,7 +10,7 @@
     padding: 10px;
 }
 
-.products-grid, .comments-grid {
+.grid-container-1 .products-grid {
   grid-area: main;
   background-color: rgba(22, 154, 20, 0.8);
   border: transparent;
@@ -19,11 +19,11 @@
   text-align: center;
 }
 
-.comments-grid {
+.grid-container-1 .comments-grid {
   grid-area: comments;
 }
 
-.footer-grid {
+.grid-container-1 .footer-grid {
   grid-area: footer;
   background-color: orange;
   border: transparent;
@@ -33,23 +33,41 @@
   padding: 3px;
 }
 
-.sub-container {
+
+.grid-container-2{
   display: grid;
-    grid-template-areas:
-      'item1';
-    gap: 5px;
+  grid-template-areas:
+  'title title title title title'
+  'image image seller seller seller'
+  'image image seller seller seller'
+  'desc desc seller seller seller';
+  gap: 10px;
+  padding: 10px;
+
+
+}
+.grid-container-2 .product-title{
+
+  grid-area: title;
+  background-color: purple;
 }
 
-#item1, #item2 {
-  grid-area: item1;
-  background-color: orange;
-  border: transparent;
-  padding: 10vw;
-  width: auto;
-  font-size: 30px;
-  text-align: center;
+.grid-container-2 .product-image{
+
+  grid-area: image;
+  background-color: green;
+}
+.grid-container-2 .product-seller{
+
+  grid-area: seller;
+  background-color: pink;
+}
+.grid-container-2 .product-desc{
+
+  grid-area: desc;
+  background-color: red;
+  float: right;
 }
 
-#item2 {
-  grid-area: item2;
-}
+
+

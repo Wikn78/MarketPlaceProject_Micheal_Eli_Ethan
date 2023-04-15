@@ -7,8 +7,8 @@ if(! $conn ) {
 
 echo 'Connected successfully';
 // Need the other pieces of data
-$sql = "SELECT ProductTitle, ProductDescription, UserID, lLcation, ProductPicture, ProductPrice
-FROM My_ProductInfo";
+$sql = "SELECT ProductTitle, ProductDescription, UserID, Location, ProductPicture, ProductPrice
+FROM ProductInformation";
 
 if (mysqli_query($conn, $sql)) {
     echo "New listing created successfully";
