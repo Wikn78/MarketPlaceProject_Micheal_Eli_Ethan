@@ -28,29 +28,17 @@
 
             while($row = mysqli_fetch_assoc($result)) {
     
-                echo 
-                "
-                    <div class=\"grid-container-2\" onclick=\"loadPage('" . $id . "')\">
+                echo
+                "<div class=\"grid-container-2\" onclick=\"loadPage('" . $id . "')\">
+                    <header class=\"item-title\">". $row['ProductTitle']. "</header>
+                    <h2 class=\"item-price\">". $row['ProductPrice']. "</h2>
                     
-                        <header class=\"product-title\">". $row['ProductTitle']. "</header>
-                        <h2 class=\"product-image\">". $row['ProductPrice']. "</h2>
-                        
-                        <p class=\"product-seller\">". $row['Location']. "</p>
-                        <p class=\"product-desc\">". $row['ProductDescription']. "</p>
-    
-                    </div>
-                
-                
-                
-                ";
-            
+                    <p class=\"item-desc\">". $row['ProductDescription']. "</p>
+                    <p class=\"item-desc\">". $row['Location']. "</p>
+                </div>";
             }
-        
         }
-
     }
-
-
 ?>
         </div>
         <div class="comments-grid">

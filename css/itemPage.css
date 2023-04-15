@@ -1,72 +1,115 @@
-.grid-container-1 {
+/*grid sectinon*/
+.container {
     display: grid;
     grid-template-areas:
-      'header header header header header header'
-      'main main main main main main'
-      'main main main main main main'
-      'comments comments comments comments comments comments'
-      'footer footer footer footer footer footer';
+      'main'
+      'comments'
+      'footer';
     gap: 10px;
-    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.grid-container-1 .products-grid {
+.listing-grid, .comments-grid {
   grid-area: main;
-  background-color: rgba(22, 154, 20, 0.8);
   border: transparent;
   width: auto;
-  font-size: 30px;
+  align-items: center;
   text-align: center;
+  padding: 10px;
+  background-color: #9DB5B2;
 }
 
 .grid-container-1 .comments-grid {
   grid-area: comments;
-}
-
-.grid-container-1 .footer-grid {
-  grid-area: footer;
-  background-color: orange;
-  border: transparent;
-  text-align: center;
-  height: auto;
-  font-size: 10px;
-  padding: 3px;
-}
-
-
-.grid-container-2{
-  display: grid;
   grid-template-areas:
-  'title title title title title'
-  'image image seller seller seller'
-  'image image seller seller seller'
-  'desc desc seller seller seller';
-  gap: 10px;
-  padding: 10px;
-
-
-}
-.grid-container-2 .product-title{
-
-  grid-area: title;
-  background-color: purple;
+    'item1';
+  gap: 5px;
 }
 
-.grid-container-2 .product-image{
-
-  grid-area: image;
-  background-color: green;
+.sub-container {
+  display: flex;
+  gap: 5px;
+  z-index: 1;
 }
-.grid-container-2 .product-seller{
 
-  grid-area: seller;
-  background-color: pink;
+#item1, #item2 {
+  grid-area: item1;
+  border: solid black;
+  padding: 5vw;
+  width: auto;
+  font-size: 14pt;
+  text-align: center;
+  background-color: #DAF0EE;
+  flex: 1;
 }
 .grid-container-2 .product-desc{
 
+#item2 {
+  grid-area: item2;
+  align-items: left;
+  text-align: left;
+}
+
+#item2 .item-locale{
+  grid-area: locale;
+}
+
+#item2 .item-price{
+  grid-area: price;
+}
+
+.user-img {
+  grid-area: avatar;
+}
+
+.user-name {
+  grid-area: name;
+}
+
+#item2 .item-desc {
   grid-area: desc;
-  background-color: red;
-  float: right;
+}
+
+/*General stuff*/
+#item1 img {
+  min-height: 512px;
+  max-height: 900px;
+  width: auto;
+}
+
+#item2 img {
+  min-height: 100px;
+  max-height: 100px;
+  width: auto;
+  flex: 1;
+}
+
+/*image preview section*/
+#output{
+  max-height: 600px;
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+  position: relative;
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#output .image{
+  height: 400px;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+#output .image img{
+  height: 100%;
+  width: 100%;
 }
 
 

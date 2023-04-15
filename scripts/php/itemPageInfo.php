@@ -11,7 +11,7 @@ $sql = "SELECT ProductTitle, ProductDescription, UserID, Location, ProductPictur
 FROM ProductInformation";
 
 if (mysqli_query($conn, $sql)) {
-    echo "New listing created successfully";
+    echo "Connected successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
