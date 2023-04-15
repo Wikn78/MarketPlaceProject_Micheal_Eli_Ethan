@@ -7,6 +7,7 @@
     gap: 10px;
     margin-left: 20px;
     margin-right: 20px;
+    border: transparent;
 }
 
 .listing-grid, .comments-grid {
@@ -19,17 +20,17 @@
   background-color: #9DB5B2;
 }
 
-.grid-container-1 .comments-grid {
+.container .comments-grid {
   grid-area: comments;
   grid-template-areas:
     'item1';
   gap: 5px;
+
 }
 
 .sub-container {
   display: flex;
   gap: 5px;
-  z-index: 1;
 }
 
 #item1, #item2 {
