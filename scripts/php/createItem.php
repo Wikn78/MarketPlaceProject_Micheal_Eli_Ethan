@@ -20,7 +20,7 @@
 	}
 
     if(isset($_GET['image'])) {
-		
+		$pic = ($_GET['image']);
 	}
 
 	if(isset($_GET['price'])) {
