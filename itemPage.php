@@ -51,7 +51,7 @@
 
     if($id !== "") {
 
-        $sql = "SELECT ProductTitle, ProductDescription, ProductPicture, Location, ProductPrice FROM ProductInformation WHERE ProductID = " . $id;
+        $sql = "SELECT Title, PDescription, PLocation, PicturePath, Price FROM ProductInformation WHERE ProductID = " . $id;
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
@@ -60,17 +60,17 @@
                 echo
                 "<div class=\"container\" onclick=\"loadPage('" . $id . "')\">
                     <div class=\"listing-grid\"> 
-                    <h2>" . $row['ProductTitle'] . "</h2>
+                    <h2>" . $row['Title'] . "</h2>
                         <div class=\"sub-container\">
                             <div id=\"item1\">
-                                <img src=\"./images/imageIcons/test.jpg\">
+                                <img src=\"". $row['PicturePath'] ."\">
                             </div>
                             <div id=\"item2\">
-                                <img class=\"user-img\" src=\"./images/imageIcons/test.jpg\">
+                                <img class=\"user-img\" src=\"". $row['PicturePath'] ."\">
                                 <h3 class=\"user-name\">Test</h3><br>
-                                <h2 class=\"item-price\">Price: ". $row['ProductPrice'] ."</h2><br>
-                                <p class=\"item-locale\">Location: ". $row['Location'] ."</p><br>
-                                <p class=\"item-desc\">Description: ". $row['ProductDescription'] ."</p><br>
+                                <h2 class=\"item-price\">Price: ". $row['Price'] ."</h2><br>
+                                <p class=\"item-locale\">Location: ". $row['PLocation'] ."</p><br>
+                                <p class=\"item-desc\">Description: ". $row['PDescription'] ."</p><br>
                             </div>
                         </div>
                     </div>
