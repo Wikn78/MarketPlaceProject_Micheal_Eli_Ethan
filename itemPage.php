@@ -63,7 +63,7 @@
                     <h2>" . $row['Title'] . "</h2>
                         <div class=\"sub-container\">
                             <div id=\"item1\">
-                                <img src=\"". $row['PicturePath'] ."\">
+                                <img src=\"".$row['PicturePath']."\">
                             </div>
                             <div id=\"item2\">
                                 <img class=\"user-img\" src=\"./images/Avatars/Default.png\">
