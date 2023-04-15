@@ -20,25 +20,37 @@
 		$location = ($_GET['location']);
 	}
 
+	// this doesn't work
     if(isset($_FILES['image'])) {
-		$dirname = "./images/Products/";    
 
-		$of = $_FILES['image']['name'];
-		$ext = pathinfo($of, PATHINFO_EXTENSION);
+		$target_dir = "../../images/Products/";
 
-		$changename3 = time() * 24 * 60;
-		$image_name3 = "timage_" . $changename3 . "." . $ext;
 
-		$final_pathdir = $dirname . $image_name3;
-		$suc = move_uploaded_file($_FILES['image']['tmp_name'], "../../images/Products/");
+		$file_extension = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
+		$randomish = time() * 24 * 60;
+		$new_Name = $randomish . $file_extension;
+		$target_file = $target_dir . $new_Name;
+		$uploadOk = 1;
+		$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-		if ($suc > 0) 
-		{
-			echo "Image uploaded successfully"; 
-		} else {
-			echo "Error : " . $_FILES['filimg1']['error'];
+		// Check if file already exists
+		if (file_exists($target_file)) {
+			echo "Sorry, file already exists.";
+			$uploadOk = 0;
 		}
-		$pic = $dirname.$image_name3;
+
+		// Check if $uploadOk is set to 0 by an error
+		if ($uploadOk == 0) {
+			echo "Sorry, your file was not uploaded.";
+		// if everything is ok, try to upload file
+		} else {
+			if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+				echo "The file ". htmlspecialchars(basename( $_FILES["image"]["name"])). " has been uploaded.";
+				$pic = ("./images/Products/".htmlspecialchars(basename( $_FILES["image"]["name"]))); // SAVE AS A STRING GOD DAMN
+			} else {
+				echo "Sorry, there was an error uploading your file.";
+			}
+		}
 	}
 
 	if(isset($_GET['price'])) {
