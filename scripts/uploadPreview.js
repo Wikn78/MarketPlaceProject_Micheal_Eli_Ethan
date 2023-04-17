@@ -1,19 +1,7 @@
-const input = document.querySelector("input")
-const output = document.querySelector("output")
-let imagesArray = []
-
-input.addEventListener("change", () => {
-    const file = input.files
-    imagesArray.push(file[0])
-    displayImages()
-})
-
-function displayImages() {
-    let images = ""
-    imagesArray.forEach((image, index) => {
-        images += `<div class="image">
-            <img src="${URL.createObjectURL(image)}" alt="image">
-        </div>`
-    })
-    output.innerHTML = images
-}
+var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+    URL.revokeObjectURL(output.src) // free memory
+    }
+};

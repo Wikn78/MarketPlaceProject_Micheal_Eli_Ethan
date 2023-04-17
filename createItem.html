@@ -10,36 +10,79 @@
 
 <body>
     <!--header-->
+    <script>
+
+        function loadHomePage(){
+  
+          window.location.href = "./homescreen.html";
+  
+        }
+      </script>
+    <div class="header-item">
+        <div class="header">
+            <h1 onclick="loadHomePage()">Halleium</h1>
+            <div class="search">
+                        
+                    <form action="#">
+                        <input type="text" placeholder=" Search Items " name="itemSearch">
+                    </form>
+                
+            </div>
+    
+            <div class="dropdown">
+                <button class="dropbtn"><div class="profileimage"> <img src="./images/hamburgermenu_512.png" alt="menuIcon" style="width:50px"></div>
+                    
+                </button>
+                
+                <div class="dropdown-content">
+                    <!--
+                      Most of these should only show up if the user is logged into a session
+                      Also this menu needs to show over other menu items.
+                    -->
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Inbox</a>
+                    <a href="./createItem.html">List an Item</a>
+                    <a href="#">Your Listings</a>
+                    <a href="#">Shipping Address</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Other</a>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!--Body-->
     <div class="container">
         <div class="listing-grid">
-            <form action="./scripts/php/createItem.php" method="post" enctype="multipart/form-data">
+            <form action="./scripts/php/createItem.php" method="POST" enctype="multipart/form-data">
             <div class="sub-container">
                 <div id="item1">
 
-                    <script src="./scripts/uploadPreview.js" async> // async is needed to load without page reload
-                    </script>
+                    <script src="./scripts/uploadPreview.js"></script>
+                    <img src="./images/Products/Default.jpeg" id="output"/><br>
 
-                    <output></output>
                     <label>Select image to upload:</label>
-                    <input type="file" id="pic" accept="image/jpeg, image/jpg, image/png"><br>
+                    <input type="file" accept="image/jpeg, image/jpg, image/png" name="image" onchange="loadFile(event)"><br>
+
                     <label for="title">Item name:</label>
-                    <input type="text" id="title"><br>
+                    <input type="text" name="title"><br>
+
                     <label for="location">Location:</label>
-                    <input type="text" id="location"><br>
+                    <input type="text" name="location"><br>
+
                     <label for="price">Price:</label>
-                    <input type="text" id="Price"><br>
+                    <input type="text" name="price"><br>
+
                     <label for="desc">Desc:</label>
-                    <input type="textbox" id="desc"><br>
-                    <input type="submit" value="Submit">
+                    <input type="textbox" name="desc"><br>
+
+                    <input type="submit" name="submit" value="Submit">
                 </div>
             </form>
             </div>
         </div>
-        <div class="footer-grid"><p>Copyright Halleium</p></div>
     </div>
 
+    <footer><p>Copyright Halleium<p></footer>
 </body>
-
 </html>

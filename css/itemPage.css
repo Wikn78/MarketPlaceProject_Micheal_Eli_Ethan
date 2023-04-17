@@ -2,70 +2,105 @@
 .container {
     display: grid;
     grid-template-areas:
-      'header header header header header header'
-      'main main main main main main'
-      'main main main main main main'
-      'comments comments comments comments comments comments'
-      'footer footer footer footer footer footer';
+      'main'
+      'comments';
     gap: 10px;
     margin-left: 20px;
     margin-right: 20px;
+    border: transparent;
 }
 
 .listing-grid, .comments-grid {
   grid-area: main;
   border: transparent;
   width: auto;
-  font-size: 30px;
   align-items: center;
   text-align: center;
   padding: 10px;
   background-color: #9DB5B2;
 }
 
-.comments-grid {
+.container .comments-grid {
   grid-area: comments;
   grid-template-areas:
     'item1';
   gap: 5px;
+
 }
 
 .sub-container {
-  display: grid;
-  grid-template-areas:
-    'item1' 'item2';
+  display: flex;
   gap: 5px;
 }
 
 #item1, #item2 {
   grid-area: item1;
-  border: transparent;
+  border: solid black;
   padding: 5vw;
   width: auto;
   font-size: 14pt;
   text-align: center;
   background-color: #DAF0EE;
+  flex: 1;
 }
 
 #item2 {
   grid-area: item2;
+  align-items: left;
+  text-align: left;
+}
+
+#item2 .item-locale{
+  grid-area: locale;
+}
+
+#item2 .item-price{
+  grid-area: price;
+}
+
+.user-img {
+  grid-area: avatar;
+}
+
+.user-name {
+  grid-area: name;
+}
+
+#item2 .item-desc {
+  grid-area: desc;
+}
+
+/*General stuff*/
+#item1 img {
+  min-height: 512px;
+  max-height: 512px;
+  min-width: 512px;
+  max-width: 512px;
+}
+
+#item2 img {
+  min-height: 100px;
+  max-height: 100px;
+  max-width: 100px;
+  min-width:100px;
+  flex: 1;
 }
 
 /*image preview section*/
-output{
-  width: 30%;
-  min-height: 50px;
+#output{
+  max-height: 600px;
+  max-width: 600px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 5px;
   position: relative;
-  border-radius: 5px;
+  border-radius: 2px;
   margin-left: auto;
   margin-right: auto;
 }
 
-output .image{
+#output .image{
   height: 400px;
   border-radius: 2px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -73,7 +108,10 @@ output .image{
   position: relative;
 }
 
-output .image img{
+#output .image img{
   height: 100%;
   width: 100%;
 }
+
+
+

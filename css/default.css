@@ -62,7 +62,7 @@ body {
 }
 
 .dropdown {
-  float: left;
+  float: right;
   overflow: hidden;
 }
 /* Size of dropdown button */
@@ -72,6 +72,7 @@ body {
   display: inline-block; 
   position: relative;
   outline: none;
+  
   color: white;
   padding: 14px 16px;
   background-color: inherit;
@@ -82,9 +83,11 @@ body {
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
-/* Boxs in dropdown */
+/* Boxs in dropdown  and location*/
 .dropdown-content {
   display: none;
+  
+  left: 83%; /* align to the right edge of the parent div */
   
   position: fixed;
   background-color: #f9f9f9;
@@ -109,62 +112,21 @@ body {
 /* Location of dropdown on-click*/
 .dropdown:hover .dropdown-content {
   display:block;
-  
-  
-}
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu main main main main main'
-    'menu main main main main main'
-    'footer footer footer footer footer footer';
-    width: 100vw;
-    height: 100vh;
-  grid-template-columns: repeat(6);
-  grid-template-rows: repeat(4);
-
-  background-color: #3B413C;
-  padding: 5px;
-}
-
-.header-item {
-  grid-area: header;
-  background-color: rgba(255, 255, 255, 0.8);
-  /* border: 1px solid rgba(5, 151, 71, 0.8); */
-  
-  font-size: 30px;
+  float:right;
   
 }
 
-.search-settings-grid {
-  grid-area: menu;
-  background-color: rgba(155, 17, 17, 0.8);
-  /* border: 1px solid rgba(0, 0, 0, 0.8); */
-  height: 100vh;
-  padding: 10px;
-  width: 30vw;
-  font-size: 60px;
-  text-align: left; 
-
+label {
+  font-size: 16pt;
 }
 
-.products-grid{
-
-  grid-area: main;
-  background-color: rgba(22, 154, 20, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  width: 70vw;
-  font-size: 30px;
-  text-align: center;
-  position:relative;
-  z-index: 1;
+.user-img {
+  min-height: 100px;
+  max-height: 300px;
+  width: auto;
 }
 
-.footer-grid {
-  grid-area: footer;
+footer {
   background-color: #DAF0EE;
   border: transparent;
   text-align: center;
@@ -173,61 +135,6 @@ body {
   padding: 3px;
 }
 
-.grid-container-2{
-  display: grid;
-  grid-template-areas:
-    'picture picture title title title'
-    'picture picture price price price'
-    'desc desc desc desc desc'
-    ;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 1px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 30px;
-  height: 20%;
-  width: 92%;
-  
-  z-index: 1;
-
-
-}
-.grid-container-2 .item-title{
-  
-  grid-area: title;
-  background-color: rgba(22, 154, 20, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-
-  z-index: 2;
-}
-
-.grid-container-2 .item-desc{
-  grid-area: desc;
-  background-color: rgba(22, 154, 20, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  
-  z-index: 2;
-}
-
-.grid-container-2 .item-image{
-  grid-area: picture;
-  background-color: rgba(22, 154, 20, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-
-  z-index: 2;
-
-}
-
-.grid-container-2 .item-price{
-  grid-area: price;
-  
-  background-color: rgba(22, 154, 20, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  z-index: 2;
-
-}
-
-label {
-  font-size: 16pt;
+p {
+  font-size: 8pt;
 }

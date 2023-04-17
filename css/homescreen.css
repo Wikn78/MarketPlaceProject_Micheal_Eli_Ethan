@@ -1,0 +1,122 @@
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu main main main main main'
+      'menu main main main main main'
+      'footer footer footer footer footer footer';
+      width: 100vw;
+      height: 100vh;
+    grid-template-columns: repeat(6);
+    grid-template-rows: repeat(4);
+  
+    background-color: #3B413C;
+    padding: 5px;
+  }
+  
+  .header-item {
+    grid-area: header;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* border: 1px solid rgba(5, 151, 71, 0.8); */
+    height: 15vh;
+    font-size: 30px;
+   
+  }
+  /* SEARACH MENU ON LEFT */
+  .search-settings-grid {
+    grid-area: menu;
+  
+    background-color: #3B413C;
+    border: 4px solid #DAF0EE; 
+    height: 70vh;
+    padding: 10px;
+    width: 20vw;
+    color: #FFFFFF;
+    font-size: x-large;
+    text-align: left; 
+    
+  }
+  
+  .products-grid{
+  
+    grid-area: main;
+    background-color: #3B413C;
+    border: 4px solid #DAF0EE; 
+    padding: 20px;
+    width: 70vw;
+    font-size: 30px;
+    height: 70vh;
+    text-align: center;
+    grid: 10px;
+    overflow-y: scroll;
+    gap: 20px;
+    position:relative;
+   
+  }
+  
+  .footer-grid {
+    grid-area: footer;
+    background-color: #3B413C;
+    border: 4px solid #DAF0EE; 
+    padding: 3px;
+    height: 15vh;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .grid-container-2{
+    display: grid;
+    grid-template-areas:
+      'picture picture title title title'
+      'picture picture price price price'
+      'desc desc desc desc desc'
+      ;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    height: 20%;
+    width: 92%;
+    
+    z-index: 1;
+  
+  
+  }
+  .grid-container-2 .item-title{
+    
+    grid-area: title;
+    background-color: rgba(22, 154, 20, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  
+    z-index: 2;
+  }
+  
+  .grid-container-2 .item-desc{
+    grid-area: desc;
+    background-color: rgba(22, 154, 20, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    
+    z-index: 2;
+  }
+  
+  .grid-container-2 .item-image{
+    grid-area: picture;
+    background-color: rgba(22, 154, 20, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    min-height: 100px;
+    max-height: 300px;
+    min-width: 100px;
+    max-width: 600px;
+    z-index: 2;
+  
+  }
+  
+  .grid-container-2 .item-price{
+    grid-area: price;
+    
+    background-color: rgba(22, 154, 20, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
