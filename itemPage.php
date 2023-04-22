@@ -76,7 +76,7 @@
                                 <img src=\"".$row['PicturePath']."\">
                             </div>
                             <div id=\"item2\">
-                                <img class=\"user-img\" src=\"./images/Avatars/Default.png\">
+                                <img class=\"user-img\" src=\"./images/Avatars/Default.png\"> <!--Users need to have at least a file path section to be able to do this-->
                                 <h3 class=\"user-name\">Test</h3><br> <!--This needs to get the name from the shared uid-->
                                 <h2 class=\"item-price\">Price: ".$row['Price']."</h2><br>
                                 <p class=\"item-locale\">Location: ".$row['PLocation']."</p><br>
