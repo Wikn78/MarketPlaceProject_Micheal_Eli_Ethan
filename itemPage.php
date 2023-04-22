@@ -82,7 +82,7 @@
                                 <p class=\"item-locale\">Location: ".$row['PLocation']."</p><br>
                                 <p class=\"item-desc\">Description: ".$row['PDescription']."</p><br>
 
-                                <form><button type=\"button\" formaction=\"./scripts/php/BuyItem.php\" formtype\"post\">Buy Now</button></form>
+                                <form action=\"./scripts/php/BuyItem.php?id=$id\" method=\"post\"><button type=\"submit\" onclick=\"\">Buy Now</button></form>
                             </div>
                         </div>
                     </div>
@@ -92,6 +92,10 @@
                         </div>
                     </div>
                 </div>
+
+                
+
+
                 <footer><p>Copyright Halleium<p></footer>";
             }
         }

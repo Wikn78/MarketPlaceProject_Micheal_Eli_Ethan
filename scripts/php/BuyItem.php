@@ -3,8 +3,8 @@
 	$target_file;
 	require('./Configure.php');
     $id = $_REQUEST["id"];
-    $sqlFind = "SELECT PicturePath FROM ProductInformation WHERE ProductID = ".$id.";";
-    $sqlDelete = "DELETE FROM ProductInformation WHERE ProductID ".$id.";";
+    $sqlFind = "SELECT PicturePath FROM ProductInformation WHERE ProductID = $id;";
+    $sqlDelete = "DELETE FROM ProductInformation WHERE ProductID = $id;";
 
     mysqli_query($conn, $sqlFind);
     mysqli_query($conn, $sqlDelete);
