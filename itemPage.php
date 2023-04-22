@@ -81,6 +81,8 @@
                                 <h2 class=\"item-price\">Price: ".$row['Price']."</h2><br>
                                 <p class=\"item-locale\">Location: ".$row['PLocation']."</p><br>
                                 <p class=\"item-desc\">Description: ".$row['PDescription']."</p><br>
+
+                                <form><button type=\"button\" formaction=\"./scripts/php/BuyItem.php\" formtype\"post\">Buy Now</button></form>
                             </div>
                         </div>
                     </div>
