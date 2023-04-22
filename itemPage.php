@@ -77,7 +77,7 @@
                             </div>
                             <div id=\"item2\">
                                 <img class=\"user-img\" src=\"./images/Avatars/Default.png\">
-                                <h3 class=\"user-name\">Test</h3><br>
+                                <h3 class=\"user-name\">Test</h3><br> <!--This needs to get the name from the shared uid-->
                                 <h2 class=\"item-price\">Price: ".$row['Price']."</h2><br>
                                 <p class=\"item-locale\">Location: ".$row['PLocation']."</p><br>
                                 <p class=\"item-desc\">Description: ".$row['PDescription']."</p><br>
