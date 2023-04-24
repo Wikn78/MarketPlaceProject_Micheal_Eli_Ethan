@@ -85,7 +85,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $email = trim($_POST["email"]);
     }
     
-
+# nice
     
     
     // Check input errors before inserting in database
@@ -118,7 +118,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Close statement
             mysqli_stmt_close($stmt);
             
-            $url = 'Halleium_register.php';
+            $url = 'signin.php';
     
                     echo '<script type="text/javascript">';
                     echo'window.location.href="'.$url. '";';
@@ -230,7 +230,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <input type="reset" class="btn btn-secondary ml-2" value="Reset">
             </div>
-            <p>Already have an account? <a href="Halleium_register.php">Login here</a>.</p> <!-- change link for sign up page -->
+            <p>Already have an account? <a href="signin.php">Login here.</a>"</p>
         </form>
     </div>    
 </body>
