@@ -9,8 +9,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
  
 // Include config file
-require_once "config.php";
- 
+require('./scripts/php/Configure.php');
+
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -124,7 +124,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
-            <p>Don't have an account? <a href="Halleium_signup_exm.php">Sign up for one</a>.</p> <!-- change link for sign up page -->
+            <p>Don't have an account? <a href="signup.php">Sign up for one</a>.</p> <!-- change link for sign up page -->
         </form>
     </div>
 </body>

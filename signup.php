@@ -1,6 +1,7 @@
 <?php
 // Include config file
-require_once "Halleium_Configure.php"; #PHP script in order to connect to the MySQL database server
+require('./scripts/php/Configure.php');
+ #PHP script in order to connect to the MySQL database server
  
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
