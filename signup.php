@@ -84,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $email = trim($_POST["email"]);
     }
     
-
+# nice
     
     
     // Check input errors before inserting in database
