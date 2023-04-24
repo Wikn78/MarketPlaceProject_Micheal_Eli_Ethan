@@ -73,11 +73,11 @@
       ;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 1px;
+    gap: 14px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 30px;
-    height: 20%;
+    height: 40%;
     width: 92%;
     
     z-index: 1;
@@ -106,9 +106,9 @@
     background-color: rgba(22, 154, 20, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     min-height: 100px;
-    max-height: 300px;
+    max-height: 200px;
     min-width: 100px;
-    max-width: 600px;
+    max-width: 300px;
     z-index: 2;
   
   }
