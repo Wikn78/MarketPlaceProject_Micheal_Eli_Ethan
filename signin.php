@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
-                            header("location: welcome_login.php"); # Change to home page
+                            header("location: homescreen.html"); # Change to home page
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";
@@ -124,7 +124,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
-            <p>Don't have an account? <a href="Halleium_signup_exm.php">Sign up for one</a>.</p> <!-- change link for sign up page -->
+            <p>Don't have an account? <a href="signup.php">Sign up for one</a>.</p> <!-- change link for sign up page -->
         </form>
     </div>
 </body>
