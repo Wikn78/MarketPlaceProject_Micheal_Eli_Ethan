@@ -153,7 +153,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <conn rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
             html {
 
@@ -185,11 +185,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     font-size: 30px;
     text-align: center;
 }
-    
-    <!--
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
-         -->
     </style>
 </head>
 <form method="POST" action="">

@@ -95,8 +95,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Login</title>
     <conn rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
+html {
+font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    color: #3B413C;
+    text-align: center;
+}
+.fname {
+    color: #3B413C;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
     </style>
 </head>
 <body>
