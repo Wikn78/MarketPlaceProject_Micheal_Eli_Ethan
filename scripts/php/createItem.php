@@ -15,7 +15,9 @@
     // if(isset($_REQUEST['uid'])) {
 	// }
 
-	$uid = 9999;
+	session_start();
+
+	$uid = $_SESSION["id"];
 
     if(isset($_REQUEST['location'])) {
 		$location = ($_REQUEST['location']);
@@ -57,6 +59,9 @@
 	if(isset($_REQUEST['price'])) {
 		$price = ($_REQUEST['price']);
 	}
+	
+
+
 
 	$sql = "INSERT INTO ProductInformation (UserID, Title, PDescription, PLocation, PicturePath, Price)
 	VALUES ($uid, '$title', '$desc', '$location', '$target_file', $price);";

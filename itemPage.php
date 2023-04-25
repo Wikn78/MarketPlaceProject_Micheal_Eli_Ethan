@@ -37,18 +37,11 @@
                 </button>
                 
                 <div class="dropdown-content">
-                    <!--
-                        Most of these should only show up if the user is logged into a session
-                        Also this menu needs to show over other menu items.
-                    -->
-                    <a href="#">Edit Profile</a>
-                    <a href="#">Inbox</a>
-                    <a href="./createItem.html">List an Item</a>
-                    <a href="#">Your Listings</a>
-                    <a href="#">Shipping Address</a>
-                    <a href="#">Settings</a>
-                    <a href="#">Other</a>
-                </div>
+                        <a href="#">Edit Profile</a>
+                        <a href="./createItem.html">List an Item</a>
+                        <a href="#">Your Listings</a>
+                        
+                    </div>
             </div>
         </div>
     </div>

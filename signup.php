@@ -1,6 +1,7 @@
 <?php
 // Include config file
-require_once "Halleium_Configure.php"; #PHP script in order to connect to the MySQL database server
+require('./scripts/php/Configure.php');
+ #PHP script in order to connect to the MySQL database server
  
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
@@ -15,7 +16,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = trim($_POST['password']);
     $confirm_password = trim($_POST['confirm_password']);
     $email = trim($_POST['email']);
-
+    $address = trim($_POST['address']);
+    $country = trim($_POST['country']);
+    
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
@@ -25,8 +28,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["username"]))){
         $username_err = "Username can only contain letters, numbers, and underscores.";
     } else{
+        
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE username = ?";
+        $sql = "SELECT id FROM accountinformation WHERE username = ?";
         
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -53,6 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Close statement
             mysqli_stmt_close($stmt);
+            
         } 
     }
     
@@ -76,63 +81,67 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Email
-    if(empty(trim($_POST["email"]))){
+    if(empty(trim($_POST["email"])))
+    {
         $email_err = "Please enter a email.";
-        } elseif(strlen(trim($_POST["email"])) < 6){
+    } 
+    elseif(strlen(trim($_POST["email"])) < 6)
+    {
         $email_err = "Must enter valid email.";
-    } else{
+    } 
+    else
+    {
         $email = trim($_POST["email"]);
     }
     
 # nice
-    
+
     
     // Check input errors before inserting in database
-    if(!(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($email_err))){
-        //echo"hey man";
+    if((empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($email_err))){
+        echo"hey man";
+
+        $param_password = password_hash($password, PASSWORD_DEFAULT);
+        $date = date(DATE_RFC2822);
+
         // Prepare an insert statement
-        $sql = "INSERT INTO AccountInformation (username, password, email, DOB, address, country) VALUES (?, ?, ?, ?, ?, ?)";
+        $sql =  "INSERT INTO accountinformation (username, password, email, DOB, address, country) 
+        VALUES ('$username', '$param_password', '$email', '$date', '$address', '$country')";
          
-        if($stmt = mysqli_prepare($conn, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssdss", $param_username, $param_password, $param_email, date(DATE_RFC2822), $param_address, $param_country);
-            
-            // Set parameters
-            $param_username = $username;
-            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-            $param_email = $email;
-            //$param_DOB = $DOB;
-            $param_address = $address;
-            $param_country = $country;
+        $result = mysqli_query($conn, $sql);
+        
+
+
+       
             
             
-         /*   // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Redirect to login page
-               header("location: login.php");
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            } */
+            
+           
 
             // Close statement
-            mysqli_stmt_close($stmt);
+           
             
             $url = 'signin.php';
-    
+            
                     echo '<script type="text/javascript">';
                     echo'window.location.href="'.$url. '";';
                     echo '</script>';
                     echo '<noscript>';
                     echo '<meta http-equiv="refresh" content="0;url='.$url.'" />';
                     echo '</noscript>'; 
+                    
         mysqli_close($conn);
-        }
+        
     }
     
+   }else{
+
+            // Close connection
+            mysqli_close($conn);
+
    }
     
-    // Close connection
-    mysqli_close($conn);
+   
     
     
     
